@@ -85,6 +85,33 @@ numerosRomanos('MMXXII')
 numerosRomanos('MCMXCIV')
 
 
+def romanNumbHashMap(string)
+    result = 0
+    map = {
+        'I' =>1,
+        'V' =>5,
+        'X' =>10,
+        'L' =>50,
+        'C' =>100,
+        'D' =>500,
+        'M' =>1000,
+    }
+    string.each_char.with_index do |ch,i|
+
+        value = map[ch]
+        if i< string.length-1 && value < map[string[i+1]]
+            result -= value
+        else
+            result += value
+        end
+        
+    end
+    return result.to_s + "<= result"
+
+end
+
+puts romanNumbHashMap('MCMXCIV')
+
 # Buscar el objetivo en un array
 
 target = 17;
@@ -228,3 +255,39 @@ end
 end
 
 puts isValid('(){}[]')
+
+
+
+# Valid Parentheses (HASH) - (MAP)
+
+def isValidMap(signal)
+    map = {
+      '(' => ')',
+      '{' => '}',
+      '[' => ']'
+    }
+  
+    stack = []
+  
+    signal.each_char do |c|
+      if map.include?(c)
+        stack.push(c)
+      elsif map.values.include?(c)
+        if stack.empty?
+          return false
+        else
+          temp = stack.pop
+          if c != map[temp]
+            return false
+          end
+        end
+      end
+    end
+  
+    stack.empty?
+  end
+  
+  puts isValidMap('()')       # Debería imprimir true
+  puts isValidMap('({[')      # Debería imprimir false
+  puts isValidMap('({[]})')   # Debería imprimir true
+  puts isValidMap('({[})')    # Debería imprimir false

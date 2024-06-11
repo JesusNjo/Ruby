@@ -16,7 +16,7 @@ end
 for i in 0..4 do
     puts i
   end
-
+#Bucle foreach
 (0..4).each do |i|
     puts i
 end
