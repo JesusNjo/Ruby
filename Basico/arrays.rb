@@ -15,7 +15,7 @@ pais.chars.reverse_each do |ch|
   puts
 # Mejoras en la agregacion de datos a un array
 
-europa = %w{España Alemania Francia Portugal}
+europa = %w{España Alemania Francia Portugal} # Se utiliza este metodo para array de Strings
 
 puts europa[0]
 

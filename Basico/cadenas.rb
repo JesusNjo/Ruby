@@ -1,6 +1,7 @@
 # Se puede utilizar "" y ''. Funcionan de igual manera como en JS
 #La diferencia entre comillas simples y dobles, la comillas simples '' compilan mas rapido
 #Con comillas simples se puede utilizar las secuencias de escape: \s \n
+#Comillas simples es para texto PLANO, comillas dobles para funcionalidades
 puts "Hola con comillas doble";
 puts 'Hola con comillas simple';
 

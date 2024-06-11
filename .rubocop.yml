@@ -1,0 +1,8 @@
+# Archivo: .rubocop.yml
+AllCops:
+  NewCops: enable
+Style/Tab:
+  Enabled: false
+  
+Layout/LeadingCommentSpace:
+  Enabled: false
