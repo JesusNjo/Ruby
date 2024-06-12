@@ -1,5 +1,6 @@
-require_relative 'automovil'
+nombre = [
+    {nombre: 'Pedro', edad: 20},
+    {nombre: 'Juan', edad: 25}
+]
 
-auto = Automovil.new('Negro', 'Toyota')
-puts auto.marca
-auto.arrancar
+puts nombre.map{|x| x[:nombre]}

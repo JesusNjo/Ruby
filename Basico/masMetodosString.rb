@@ -18,3 +18,16 @@ puts cadena #Objeto normal
 resultado = cadena.upcase! #Cuando ejecuta el bang el objeto principal también cambia
 puts cadena #Objeto modificado
 puts resultado
+
+
+#Multi linea de string
+
+puts <<texto_random_to_print
+IN RUBY, you can writer whatever you want inside this metohd withone quotes
+texto_random_to_print
+
+texto = <<texto_random_to_print
+IN RUBY, you can writer whatever you want inside this metohd withone quotes
+texto_random_to_print
+
+puts texto
